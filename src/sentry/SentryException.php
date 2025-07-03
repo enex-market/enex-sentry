@@ -1,6 +1,6 @@
 
-<?php
 
+<?php
 namespace enex\sentry;
 
 use Bitrix\Main\Config\Configuration;
