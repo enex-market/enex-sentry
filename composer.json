@@ -1,0 +1,29 @@
+{
+  "name": "enex/sentry",
+  "description": "Bitrix CMS integration with Sentry",
+  "keywords": [
+    "bitrix",
+    "sentry",
+    "error",
+    "logging",
+    "monitoring"
+  ],
+  "type": "library",
+  "license": "Apache License 2.0",
+  "authors": [
+    {
+      "name": "enex-market",
+      "email": "it@enex.market"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "sentry/sdk": "^4.5",
+    "vlucas/phpdotenv": "^2.1 || ^3.3 || ^4 || ^5"
+  },
+  "autoload": {
+    "psr-4": {
+      "enex\\": "src/"
+    }
+  }
+}
