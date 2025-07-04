@@ -47,7 +47,7 @@ class SentryException extends FileExceptionHandlerLog
     protected function shouldLogError(int $logType): bool
     {
         // По умолчанию ничего не фильтруем, можно расширить $logType == ExceptionHandlerLog::LOW_PRIORITY_ERROR;
-        return false;
+        return true;
     }
 
     /**
@@ -96,7 +96,7 @@ class SentryException extends FileExceptionHandlerLog
         $dsn = $_ENV['SENTRY_DSN'] ?? null;
         $attachStacktrace = $_ENV['SENTRY_ATTACHSTACKTRACE'] ?? true;
         $sendDefaultPii = $_ENV['SENTRY_SEND_DEFAULT_PII'] ?? true;
-        
+
         if ($environment && $dsn && $environment !== 'local' && function_exists('Sentry\init')) {
             init([
                 'dsn'              => $dsn,
